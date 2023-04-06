@@ -1,0 +1,19 @@
+{
+  "name": "waremap",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "testapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniyo98/WareMap.git"
+  },
+  "author": "Hector Daniel Ramirez Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniyo98/WareMap/issues"
+  },
+  "homepage": "https://github.com/daniyo98/WareMap#readme"
+}
