@@ -1,2 +1,20 @@
 ########## WareMap Installation ##########
-1.- 
+########################################## -> Install Node js
+1.- sudo apt update
+2.- sudo apt install nodejs
+3.- node -v (v12.22.9)
+4.- sudo apt install npm
+6.- npm -v (8.5.1)
+########################################## -> Install Mysql
+1.- sudo apt update
+2.- sudo apt install mysql-server (8.0.32)
+3.- sudo systemctl start mysql.service
+########################################## -> Install dependencias js
+1.- npm install express --save
+2.- npm install ip --save
+2.- npm install path --save
+4.- npm install express-autoroute --save
+5.- npm install ejs --save
+########################################## -> Install nodemon
+*npm install --save-dev nodemon
+*npm install -g nodemon

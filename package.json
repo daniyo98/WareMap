@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/daniyo98/WareMap/issues"
   },
-  "homepage": "https://github.com/daniyo98/WareMap#readme"
+  "homepage": "https://github.com/daniyo98/WareMap#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-autoroute": "^2.1.1",
+    "ip": "^1.1.8",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
