@@ -1,22 +1,37 @@
 const express = require('express');
 const ip = require('ip');
 const autoroute = require('express-autoroute');
+const engine = require('ejs-mate');
+const path = require('path');
+const fs = require('fs');
+const https = require('https');
 const app = express();
-const port = 3000;
+const port = 443;
+
+
 //Motor de plantillas
+app.engine('ejs', engine);
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname,'views'));
 
-app.set('views', __dirname+'/views');
+//Iniciando el servidor con certificado ssl
+https.createServer({
+    cert: fs.readFileSync(path.join(__dirname,'certificates/cert.pem')),
+    key: fs.readFileSync(path.join(__dirname, 'certificates/key.pem'))
+}, app).listen(port, function(){
+    console.log(`Test server is ready on http://${ip.address()}:${port}`);
+});
 
-app.listen(port, function(){
-        console.log(`Test app is ready on http://${ip.address()}:${port}`);
-    });
-app.use(express.static(__dirname+'/public'))
+
+//Autorouteo
+app.use(express.static(path.join(__dirname,'public')))
+
 autoroute(app, {
-        dir: __dirname+'/routes'
+        dir: path.join(__dirname,'routes')
     });
-
+//Ninguna ruta encontrada
 app.use(function(req,res){
-        res.status(404).render('error404', {title: 'Error' ,path: req.path});
+        let error = 404;
+        res.status(error).render('error404', {title: 'Error' ,path: req.path});
     });
 
