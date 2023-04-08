@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/daniyo98/WareMap#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "ejs-mate": "^4.0.0",
     "express": "^4.18.2",
     "express-autoroute": "^2.1.1",

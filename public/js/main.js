@@ -14,4 +14,3 @@ navigator.geolocation.getCurrentPosition(
         console.log(e)
     }
     );
-

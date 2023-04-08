@@ -2,12 +2,12 @@ const express = require('express');
 const ip = require('ip');
 const autoroute = require('express-autoroute');
 const engine = require('ejs-mate');
+const bodyParser = require('body-parser');
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
 //DB Conexion
-const initDB = require('./database/connection')
-initDB();
+const initDB = require('./connection')
 const app = express();
 const port = 443;
 
