@@ -6,9 +6,7 @@ navigator.geolocation.getCurrentPosition(
 
         var map = L.map('map-template').setView([latitude,longitude],16);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png ').addTo(map);
-        var marker = L.marker([latitude, longitude]);
-        marker.bindPopup('Hola');
-        marker.addTo(map);
+        
 
     },
     function(e){

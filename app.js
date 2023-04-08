@@ -5,6 +5,9 @@ const engine = require('ejs-mate');
 const path = require('path');
 const fs = require('fs');
 const https = require('https');
+//DB Conexion
+const initDB = require('./database/connection')
+initDB();
 const app = express();
 const port = 443;
 
@@ -34,4 +37,5 @@ app.use(function(req,res){
         let error = 404;
         res.status(error).render('error404', {title: 'Error' ,path: req.path});
     });
+
 
